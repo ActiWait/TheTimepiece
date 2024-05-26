@@ -31,7 +31,6 @@ namespace TheTimepiece
                            new PointF(0, -240), new PointF(15, -220), new PointF(15, -20)];
 
             InitializeComponent();
-            textBox1.Text = Convert.ToString(i);
             timer1.Start();
 
         }
@@ -74,9 +73,7 @@ namespace TheTimepiece
         private void timer1_Tick(object sender, EventArgs e)
         {
             i = (i + 1) % 43200;
-            textBox1.Text = Convert.ToString(i%60);
             this.Invalidate();
-
         }
     }
 }

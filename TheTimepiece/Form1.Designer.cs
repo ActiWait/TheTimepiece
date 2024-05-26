@@ -31,21 +31,13 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             timer1 = new System.Windows.Forms.Timer(components);
-            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Interval = 10;
+            timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(44, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -55,7 +47,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(782, 753);
-            Controls.Add(textBox1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             MaximumSize = new Size(800, 800);
@@ -65,12 +56,10 @@
             Text = "Timepiece";
             Paint += MainForm_Paint;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private TextBox textBox1;
     }
 }
